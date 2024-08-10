@@ -10,60 +10,43 @@
         /* Estilos para el botón */
         #playButton {
             position: absolute;
-            top: 20px;
+            top: 20px; /* Ajusta la posición, no lo olvides */
             left: 50%;
             transform: translateX(-50%);
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #ff6961;
+            background-color: #ff6961; /* Color del botón */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            z-index: 1000;
+            z-index: 1000; /* Asegura que esté encima de otros elementos y Karlita lo vea bien. */
         }
 
-        /* Media Queries para responsive design */
-        @media only screen and (max-width: 768px) {
-            .container {
-                width: 90%;
-                margin: 0 auto;
-            }
+        /* Ajustes para el texto y las citas */
+        .text-container {
+            text-align: center; /* Centra el texto */
+        }
 
-            .header-col h1 {
-                font-size: 24px;
-            }
+        blockquote {
+            font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+            line-height: 1.5;  /* Mejora la legibilidad */
+            margin: 20px auto; /* Añade margen superior e inferior */
+            max-width: 90%;  /* Limita el ancho del bloque de texto */
+            padding: 10px; /* Espacio dentro del bloque de texto */
+            box-sizing: border-box; /* Incluye padding en el ancho total */
+        }
 
-            .slides blockquote p {
-                font-size: 14px;
+        /* Ajustes para dispositivos más pequeños */
+        @media (max-width: 768px) {
+            blockquote {
+                max-width: 95%; /* Reduce un poco más el ancho del bloque en pantallas pequeñas */
+                font-size: 1em; /* Reduce el tamaño del texto en pantallas pequeñas */
             }
 
             #playButton {
-                font-size: 14px;
+                font-size: 14px; /* Ajusta el tamaño del botón en pantallas pequeñas */
                 padding: 8px 16px;
-            }
-
-            .heart {
-                font-size: 20px;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .header-col h1 {
-                font-size: 20px;
-            }
-
-            .slides blockquote p {
-                font-size: 12px;
-            }
-
-            #playButton {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-
-            .heart {
-                font-size: 16px;
             }
         }
     </style>
@@ -134,7 +117,8 @@
     </div>
 </div>
 
-<button id="playButton">Haz clic para activar la música</button>
+<!-- Botón para activar la música -->
+<button id="playButton">Haz click aquí, corazón.</button>
 
 <script>
     document.getElementById('playButton').addEventListener('click', function() {
