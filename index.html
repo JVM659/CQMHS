@@ -3,23 +3,68 @@
 <head>
     <title>Love You</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="asset/css/style.css">
     <style>
         /* Estilos para el botón */
         #playButton {
             position: absolute;
-            top: 20px; /* Ajusta la posición según sea necesario */
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #ff6961; /* Color del botón */
+            background-color: #ff6961;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            z-index: 1000; /* Asegura que esté encima de otros elementos */
+            z-index: 1000;
+        }
+
+        /* Media Queries para responsive design */
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .header-col h1 {
+                font-size: 24px;
+            }
+
+            .slides blockquote p {
+                font-size: 14px;
+            }
+
+            #playButton {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .heart {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .header-col h1 {
+                font-size: 20px;
+            }
+
+            .slides blockquote p {
+                font-size: 12px;
+            }
+
+            #playButton {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .heart {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -89,7 +134,6 @@
     </div>
 </div>
 
-<!-- Botón para activar la música -->
 <button id="playButton">Haz clic para activar la música</button>
 
 <script>
