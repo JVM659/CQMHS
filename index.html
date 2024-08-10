@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love You</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <style>
+        /* Estilos para el botón */
+        #playButton {
+            position: absolute;
+            top: 20px; /* Ajusta la posición según sea necesario */
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6961; /* Color del botón */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000; /* Asegura que esté encima de otros elementos */
+        }
+    </style>
+</head>
+
+<body>
+
+<audio id="myAudio" muted>
+    <source src="Thousand_Years.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="main">
+            <section id="testimonials">
+                <div class="text-container">
+                    <div class="row">
+                        <div class="two columns header-col">
+                            <h1><span>Cosas que me haces sentir...</span></h1>
+                        </div>
+                        <div class="ten columns flex-container">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <blockquote>
+                                            <p>
+                                                “En tu luz aprendo a amar. En tu belleza, cómo hacer poemas. Bailas dentro de mi pecho donde nadie te ve, pero a veces yo sí, y esa vista se convierte en este arte.”
+                                            </p>
+                                            <cite>Muhammad Rumi</cite>
+                                        </blockquote>
+                                    </li>
+                                    <li>
+                                        <blockquote>
+                                            <p>
+                                                “Bajé, tratando de no mirarte mucho tiempo, como si fueses el sol, pero te ví, como el sol, incluso sin mirar.”
+                                            </p>
+                                            <cite>Leo Tolstoy, Anna Karenina</cite>
+                                        </blockquote>
+                                    </li>
+                                    <li>
+                                        <blockquote>
+                                            <p>
+                                                “He esperado esta oportunidad durante más de medio siglo para repetirte una vez más mi voto de eterna fidelidad y de amor eterno.”
+                                            </p>
+                                            <cite>Gabriel García Márquez, El Amor en los tiempos de Colera</cite>
+                                        </blockquote>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <ul class="bg-bubbles">
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+            <li><div class="heart pulse2">♥</div></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Botón para activar la música -->
+<button id="playButton">Haz clic para activar la música</button>
+
+<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audio = document.getElementById('myAudio');
+        audio.muted = false;
+        audio.play();
+    });
+</script>
+
+<script>window.jQuery || document.write('<script src="asset/js/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="asset/js/jquery.flexslider.js"></script>
+<script src="asset/js/init.js"></script>
+</body>
+</html>
